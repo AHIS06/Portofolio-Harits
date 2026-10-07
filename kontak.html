@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Harits</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigasi Bar Atas -->
+    <header class="navbar">
+        <div class="logo">HARITS.</div>
+        <nav class="nav-links">
+            <a href="about.html">ABOUT ME</a>
+            <a href="profil.html">PROFIL</a>
+            <a href="kontak.html" class="active">KONTAK</a>
+            <a href="asset.html">ASSET</a>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Kartu Utama -->
+    <main class="main-card">
+        <!-- Kolom Kiri: Form Kontak -->
+        <div class="hero-left">
+            <p class="greeting">Mari Terhubung</p>
+            <h1>Hubungi Saya.</h1>
+            <p class="bio">Silakan isi formulir di bawah ini untuk mengirimkan pesan atau penawaran kerja sama.</p>
+
+            <!-- Notifikasi Respons (Awalnya Sembunyi) -->
+            <div id="response-message" class="response-box"></div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="nama" name="nama" required placeholder="Nama Lengkap">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email Anda">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subjek" name="subjek" required placeholder="Subjek Pesan">
+                </div>
+                <div class="form-group">
+                    <textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                <div class="hero-buttons">
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <button type="reset" class="btn btn-secondary">Batal</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Kolom Kanan: Info Kontak Tambahan -->
+        <div class="hero-right-content">
+            <div class="info-box">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Email:</strong> harits@example.com</p>
+                <p><strong>Instagram:</strong> @AHIS06</p>
+                <p><strong>Lokasi:</strong> Sidoarjo, Jawa Timur</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script JavaScript untuk Respon -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const responseBox = document.getElementById('response-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah halaman mereload
+
+            // Ambil nama dari input
+            const nama = document.getElementById('nama').value;
+
+            // Tampilkan pesan respons sukses
+            responseBox.innerHTML = `<strong>Terima kasih, ${nama}!</strong> Pesan kamu berhasil terkirim. Saya akan segera membalasnya.`;
+            responseBox.style.display = 'block';
+
+            // Reset/kosongkan isi form
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>

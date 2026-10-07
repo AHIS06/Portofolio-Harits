@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset - Harits</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigasi Bar Atas -->
+    <header class="navbar">
+        <div class="logo">HARITS.</div>
+        <nav class="nav-links">
+            <a href="about.html">ABOUT ME</a>
+            <a href="profil.html">PROFIL</a>
+            <a href="kontak.html">KONTAK</a>
+            <a href="asset.html" class="active">ASSET</a>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Kartu Utama -->
+    <main class="main-card">
+        <!-- Kolom Kiri: Video -->
+        <div class="hero-left">
+            <p class="greeting">Galeri Media</p>
+            <h1>Video Saya.</h1>
+            <p class="bio">Putar video di bawah ini untuk melihat konten aset yang diunggah.</p>
+
+            <div class="media-container">
+                <video controls>
+                    <source src="cat-herd.webm" type="video/webm" />
+                    Browsermu tidak mendukung tag ini.
+                </video>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Audio -->
+        <div class="hero-right-content">
+            <div class="info-box">
+                <h3>Audio Player</h3>
+                <p class="bio">Dengarkan audio pendukung di sini:</p>
+                <div class="media-container">
+                    <audio controls>
+                        <source src="audio.mp3" type="audio/mpeg">
+                        Browsermu tidak mendukung tag audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
